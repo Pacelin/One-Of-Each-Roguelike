@@ -36,19 +36,35 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\States\Movement\WalkState.cs" />
      <Compile Include="Assets\Scripts\States\UI\Bar\BarAnimationType.cs" />
-     <Compile Include="Assets\Scripts\Movement\Movement.cs" />
+     <Compile Include="Assets\Scripts\UI\Bar.cs" />
+     <Compile Include="Assets\Scripts\States\UI\Bar\BarDecreaseState.cs" />
      <Compile Include="Assets\Scripts\States\Movement\DodgeState.cs" />
-     <Compile Include="Assets\Scripts\States\UI\Bar\BarIdleState.cs" />
-     <Compile Include="Assets\Scripts\Movement\MovementInputHandler.cs" />
+     <Compile Include="Assets\Scripts\Movement\Movement.cs" />
+     <Compile Include="Assets\Scripts\States\Movement\WalkState.cs" />
+     <Compile Include="Assets\Scripts\States\State.cs" />
+     <Compile Include="Assets\Scripts\States\Movement\IdleState.cs" />
+     <Compile Include="Assets\Scripts\States\StateMachine.cs" />
+     <Compile Include="Assets\Scripts\Weapon\LookAtCursor.cs" />
      <Compile Include="Assets\Scripts\States\UI\Bar\BarIncreaseState.cs" />
      <Compile Include="Assets\Scripts\Movement\MovementHandler.cs" />
-     <Compile Include="Assets\Scripts\States\StateMachine.cs" />
-     <Compile Include="Assets\Scripts\States\Movement\IdleState.cs" />
-     <Compile Include="Assets\Scripts\States\UI\Bar\BarDecreaseState.cs" />
-     <Compile Include="Assets\Scripts\States\State.cs" />
-     <Compile Include="Assets\Scripts\UI\Bar.cs" />
+     <Compile Include="Assets\Scripts\States\UI\Bar\BarIdleState.cs" />
+     <Compile Include="Assets\Scripts\Movement\MovementInputHandler.cs" />
+     <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Health\Health.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Health\HealthType.cs" />
+     <Compile Include="Assets\Scripts\Weapon\BasePistol.cs" />
+     <Compile Include="Assets\Scripts\Weapon\WeaponController.cs" />
+     <Compile Include="Assets\Scripts\Upgrades\Upgrades.cs" />
+     <Compile Include="Assets\Scripts\Helpful\Extensions.cs" />
+     <Compile Include="Assets\Scripts\Upgrades\WeaponUpgrade.cs" />
+     <Compile Include="Assets\Scripts\Weapon\WeaponValues.cs" />
+     <Compile Include="Assets\Scripts\Items\ItemQuality.cs" />
+     <Compile Include="Assets\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\Scripts\UI\SimpleBar.cs" />
+     <Compile Include="Assets\Scripts\UI\IBarNotificator.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity Editors\2021.3.21f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

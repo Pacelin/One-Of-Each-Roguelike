@@ -2,11 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Bar : StateMachine<Bar>
-{
+{    
+    public IBarNotificator Notificator;
+
     [Header("References")]
     public Image ActualBar;
     public Image IncreasingBar;
     public Image DecreasingBar;
+    [SerializeField] private GameObject _notificator;
 
     [Header("Settings")]
     public Vector2 Range;
@@ -56,12 +59,27 @@ public class Bar : StateMachine<Bar>
     private float _increasingBarValue;
     private float _decreasingBarValue;
 
-
     private void OnValidate()
     {
         _initialValue = Mathf.Clamp(_initialValue, Range.x, Range.y);
-        //ActualBar.fillAmount = (_initialValue - Range.x) / RangeLength;
+        ActualBar.fillAmount = (_initialValue - Range.x) / RangeLength;
         SetValue(_initialValue);
+
+        if (_notificator != null && !_notificator.TryGetComponent<IBarNotificator>(out _))
+            _notificator = null;
+    }
+
+    private void Awake()
+    {
+        if (_notificator != null)
+        {
+            Notificator = _notificator.GetComponent<IBarNotificator>();
+            if (Notificator != null) 
+            {
+                SetRange(Notificator.GetMin(), Notificator.GetMax());
+                SetValue(Notificator.GetCurrent());   
+            }
+        }
     }
 
     protected override void Start()
@@ -74,6 +92,18 @@ public class Bar : StateMachine<Bar>
 
         _currentState = IdleState;
         _currentState.Init(this);
+    }
+
+    private void OnEnable()
+    {
+        if (Notificator != null)
+            Notificator.OnValueChanged += SetValue;
+    }
+
+    private void OnDisable()
+    {
+        if (Notificator != null)
+            Notificator.OnValueChanged -= SetValue;
     }
 
     public void SetValue(float value) =>
