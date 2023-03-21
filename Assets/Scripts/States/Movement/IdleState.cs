@@ -3,9 +3,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "0_idle", menuName = "States/Movement/Idle")]
 public class IdleState : State<Movement>
 {
-    public override void Init(Movement machine)
+    public override void Init(Movement machine, State<Movement> from)
     {
-        base.Init(machine);
+        base.Init(machine, from);
         _machine.Animator.SetBool("idle", true);
     }
 

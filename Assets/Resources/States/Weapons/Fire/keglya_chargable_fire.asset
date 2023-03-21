@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e986f812b8bba4989dd3c1404cde42, type: 3}
+  m_Name: keglya_chargable_fire
+  m_EditorClassIdentifier: 
+  _charges:
+  - Time: 0.01
+    WeaponPosition: {x: 0, y: 0}
+    WeaponRotation: {x: 0, y: 0, z: -20}
+    WeaponSprite: {fileID: 0}
+    FireState: {fileID: 0}
+  - Time: 0.03
+    WeaponPosition: {x: -0.1, y: 0}
+    WeaponRotation: {x: 0, y: 0, z: -40}
+    WeaponSprite: {fileID: 0}
+    FireState: {fileID: 0}
+  - Time: 0.06
+    WeaponPosition: {x: -0.2, y: 0}
+    WeaponRotation: {x: 0, y: 0, z: -90}
+    WeaponSprite: {fileID: 0}
+    FireState: {fileID: 11400000, guid: 7edf61f57588ced44930488b54482451, type: 2}

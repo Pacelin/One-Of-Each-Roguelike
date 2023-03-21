@@ -13,9 +13,9 @@ public class DodgeState : State<Movement>
     private float _distance = 0f;
     private bool _canDodge = true;
 
-    public override void Init(Movement machine) 
+    public override void Init(Movement machine, State<Movement> from) 
     {
-        base.Init(machine);
+        base.Init(machine, from);
 
         if (!_canDodge)
         {

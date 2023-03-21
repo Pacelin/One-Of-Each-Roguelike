@@ -71,6 +71,8 @@ public class Bar : StateMachine<Bar>
 
     private void Awake()
     {
+        IncreasingBar.enabled = false;
+        DecreasingBar.enabled = false;
         if (_notificator != null)
         {
             Notificator = _notificator.GetComponent<IBarNotificator>();
@@ -79,19 +81,17 @@ public class Bar : StateMachine<Bar>
                 SetRange(Notificator.GetMin(), Notificator.GetMax());
                 SetValue(Notificator.GetCurrent());   
             }
+            else
+            {
+                SetValue(_initialValue);
+            }
         }
     }
 
     protected override void Start()
     {
-        Value = _initialValue;
-
-        IncreasingBar.enabled = false;
-        DecreasingBar.enabled = false;
-        ActualBarValue = _animateOnAwake ? Range.x : _initialValue;
-
         _currentState = IdleState;
-        _currentState.Init(this);
+        _currentState.Init(this, null);
     }
 
     private void OnEnable()

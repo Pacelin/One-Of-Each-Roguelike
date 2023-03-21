@@ -15,7 +15,7 @@ public class Movement : StateMachine<Movement>
     protected override void Start()
     {
         _currentState = IdleState;
-        _currentState.Init(this);
+        _currentState.Init(this, null);
     }
 
     protected override void Update()

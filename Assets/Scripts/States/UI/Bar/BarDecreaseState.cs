@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "2_bar_decrease", menuName = "States/UI/Bar/Decrease")]
 public class BarDecreaseState : State<Bar>
@@ -9,9 +10,9 @@ public class BarDecreaseState : State<Bar>
     [SerializeField] private float _changesAnimationSpeed;
 
 
-    public override void Init(Bar machine)
+    public override void Init(Bar machine, State<Bar> from)
     {
-        base.Init(machine);
+        base.Init(machine, from);
 
         if (_animationType == BarAnimationType.None)
         {

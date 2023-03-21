@@ -5,9 +5,9 @@ public class WalkState : State<Movement>
 {
     [SerializeField] private float _moveSpeed;
 
-    public override void Init(Movement machine)
+    public override void Init(Movement machine, State<Movement> from)
     {
-        base.Init(machine);
+        base.Init(machine, from);
         UpdateAnimation();
     }
     public override void Exit()

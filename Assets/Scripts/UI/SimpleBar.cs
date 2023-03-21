@@ -29,12 +29,18 @@ public class SimpleBar : MonoBehaviour
     private void Awake()
     {
         if (_notificator != null)
+        {
             Notificator = _notificator.GetComponent<IBarNotificator>();
-    }
-
-    private void Start()
-    {
-        Value = _initialValue;
+            if (Notificator != null) 
+            {
+                SetRange(Notificator.GetMin(), Notificator.GetMax());
+                SetValue(Notificator.GetCurrent());   
+            }
+            else
+            {
+                SetValue(_initialValue);
+            }
+        }
     }
 
     private void OnEnable()

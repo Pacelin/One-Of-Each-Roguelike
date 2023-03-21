@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a655267e6b664f5459488ea7662d2c28, type: 3}
+  m_Name: simple_auto
+  m_EditorClassIdentifier: 
+  Name: "\u0410\u0432\u0442\u043E\u043C\u0430\u0442"
+  Description: "\u041D\u0430 \u0441\u0430\u043C\u043E\u043C \u0434\u0435\u043B\u0435
+    \u0443 \u043D\u0435\u0433\u043E \u0442\u0438\u0433\u0440\u043E\u0432\u044B\u0439
+    \u043E\u043A\u0440\u0430\u0441"
+  Quality: 0
+  BulletsInClip: 0
+  Sprite: {fileID: -1873658523, guid: 7609db00fab9c47418bed9966ba6d37d, type: 3}
+  FireSound: {fileID: 0}
+  ReloadSound: {fileID: 0}
+  Data:
+    BaseDamage: 5
+    BaseCritDamageMultiplier: 1.4
+    BaseCritChance: 0.3
+    BaseReloadTime: 1
+    BaseClipSize: 32
+    BaseFireRate: 10
+    BaseSpread: 20
+  MainFirePosition: {x: 0.8, y: 0.13}
+  IdleState: {fileID: 11400000, guid: fc20a155de832cc478a7dafa0c5a8fd8, type: 2}
+  FireState: {fileID: 11400000, guid: daafb8bc9589e484fa7b019bae0aee46, type: 2}
+  SecondFireState: {fileID: 0}
+  WaitFireRateState: {fileID: 11400000, guid: 8b63f881b7e454544b4e2b3b72821abb, type: 2}
+  ReloadState: {fileID: 11400000, guid: 9ba23daefad746b439cfdaa444e44887, type: 2}

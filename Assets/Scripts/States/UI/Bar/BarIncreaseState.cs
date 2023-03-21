@@ -10,9 +10,9 @@ public class BarIncreaseState : State<Bar>
     [SerializeField] private float _changesAnimationSpeed;
 
      
-    public override void Init(Bar machine)
+    public override void Init(Bar machine, State<Bar> from)
     {
-        base.Init(machine);
+        base.Init(machine, from);
         if (_animationType == BarAnimationType.None)
         {
             machine.ActualBarValue = machine.Value;

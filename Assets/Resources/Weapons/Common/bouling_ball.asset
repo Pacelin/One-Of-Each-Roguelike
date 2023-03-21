@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a655267e6b664f5459488ea7662d2c28, type: 3}
+  m_Name: bouling_ball
+  m_EditorClassIdentifier: 
+  Name: "\u0428\u0430\u0440 \u0434\u043B\u044F \u0431\u043E\u0443\u043B\u0438\u043D\u0433\u0430"
+  Description: "\u0411\u044C\u0435\u043C \u0448\u0430\u0440\u044B \u0448\u0430\u0440\u0430\u043C\u0438"
+  Quality: 0
+  BulletsInClip: 1
+  Sprite: {fileID: 2138967866, guid: 7609db00fab9c47418bed9966ba6d37d, type: 3}
+  FireSound: {fileID: 0}
+  ReloadSound: {fileID: 0}
+  Data:
+    BaseDamage: 30
+    BaseCritDamageMultiplier: 2
+    BaseCritChance: 0.6
+    BaseReloadTime: 1.5
+    BaseClipSize: 1
+    BaseFireRate: 5
+    BaseSpread: 0
+  MainFirePosition: {x: 0, y: 0}
+  IdleState: {fileID: 11400000, guid: 037647dfe2e96be46a4da8e624cd0023, type: 2}
+  FireState: {fileID: 11400000, guid: 4bdb06de058df5e43b9a2a28ab6f8209, type: 2}
+  SecondFireState: {fileID: 0}
+  WaitFireRateState: {fileID: 11400000, guid: 0b4263ec3821dd74b907d7207251aa51, type: 2}
+  ReloadState: {fileID: 11400000, guid: b8dd8a39fb05aee41beb2a74c17f2a8b, type: 2}

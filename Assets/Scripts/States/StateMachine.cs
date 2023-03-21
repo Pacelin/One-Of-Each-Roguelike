@@ -17,10 +17,11 @@ public abstract class StateMachine<T> : MonoBehaviour where T : StateMachine<T>
         _currentState.FixedUpdate();
     }
 
-    public void SwitchState(State<T> state) 
+    public virtual void SwitchState(State<T> state) 
     {
         _currentState.Exit();
+        var oldState = _currentState;
         _currentState = state;
-        _currentState.Init((T) this);
+        _currentState.Init((T) this, oldState);
     }
 }
