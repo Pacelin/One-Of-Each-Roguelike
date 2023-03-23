@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed269989bb18f847a8f81402563b753, type: 3}
   m_Name: 2_dodge
   m_EditorClassIdentifier: 
-  _dodgeSpeed: 30
-  _dodgeDistance: 3
+  _dodgeSpeed: 15
+  _dodgeDistance: 4
   _dodgeCooldown: 1.5

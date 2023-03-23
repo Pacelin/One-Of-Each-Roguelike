@@ -1,14 +1,21 @@
 using System;
+using System.Net.WebSockets;
 
 [Serializable]
 public class PlayerData
 {
-    public float Health { get; set; }
+    public float MaxHealth { get; private set; }
 
-    public float BaseHealth;
+    public float BaseMaxHealth;
 
-    public void Reset()
-    {
-        Health = BaseHealth;
-    }
+    private float _cachedMaxHealth;
+
+    public void Reset() =>
+        _cachedMaxHealth = BaseMaxHealth;
+
+    public void AddMaxHealth(float value) =>
+        _cachedMaxHealth += value;
+
+    public void Update() =>
+        MaxHealth = _cachedMaxHealth;
 }

@@ -23,8 +23,8 @@ MonoBehaviour:
     BaseDamage: 10
     BaseCritDamageMultiplier: 1.5
     BaseCritChance: 0.4
-    BaseReloadTime: 0.8
-    BaseClipSize: 8
+    BaseReloadTime: 0.6
+    BaseClipSize: 12
     BaseFireRate: 5
     BaseSpread: 10
   MainFirePosition: {x: 0.8, y: 0.2}

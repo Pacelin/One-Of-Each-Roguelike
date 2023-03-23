@@ -2,7 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class WeaponController : StateMachine<WeaponController>
+public class WeaponController : StateMachine<WeaponController>, IBarNotificator
 {
     public event Action<WeaponFireState> OnFire;
     public event Action<float> OnReload;
@@ -18,10 +18,10 @@ public class WeaponController : StateMachine<WeaponController>
     [Space]
     public Upgrades Upgrades;
     public Transform MainFirePoint;
-    public Transform WeaponHand;
 
     [Space]
     [SerializeField] private Weapon _initialWeapon;
+    [SerializeField] private State<WeaponController> _noWeaponState;
 
     public bool PlayerIsFire => Input.GetMouseButton((int) MouseButton.Left) && Weapon.FireState != null;
     public bool PlayerIsSecondlyFire => Input.GetMouseButton((int) MouseButton.Right) && Weapon.SecondFireState != null;
@@ -31,16 +31,16 @@ public class WeaponController : StateMachine<WeaponController>
 
     private void OnValidate()
     {
-        if (_initialWeapon != null)
-            WeaponSpriteRenderer.sprite = _initialWeapon.Sprite;
+        if (WeaponSpriteRenderer != null)
+            WeaponSpriteRenderer.sprite = _initialWeapon?.Sprite;
     }
 
     protected override void Start()
     {
-        SetWeapon(_initialWeapon);
+        _currentState = _noWeaponState;
 
-        _currentState = Weapon.IdleState;
-        _currentState.Init(this, null);
+        if (_initialWeapon != null)
+            SetWeapon(_initialWeapon);
     }
 
     protected override void Update()
@@ -64,6 +64,8 @@ public class WeaponController : StateMachine<WeaponController>
 
     private void SetWeapon(Weapon weapon)
     {
+        if (weapon == null) return;
+
         Weapon = weapon;
         Upgrades.ApplyWeaponUpgrades();
 
@@ -77,6 +79,8 @@ public class WeaponController : StateMachine<WeaponController>
 
     private void ResetWeapon(Weapon weapon)
     {
+        if (weapon == null) return;
+
         Weapon.FireState?.RemoveFirePoints();
         Weapon.SecondFireState?.RemoveFirePoints();
     }
@@ -94,4 +98,8 @@ public class WeaponController : StateMachine<WeaponController>
         else
             return Quaternion.Euler(0f, 0f, rotateZ);
     }
+
+    public float GetMin() => 0;
+    public float GetMax() => Weapon == null ? 1 : Weapon.Data.ClipSize;
+    public float GetCurrent() => Weapon == null ? 0 : Weapon.BulletsInClip;
 }

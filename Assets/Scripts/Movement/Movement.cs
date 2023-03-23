@@ -6,6 +6,7 @@ public class Movement : StateMachine<Movement>
     public Rigidbody2D Rigidbody;
     public MovementHandler Handler;
     public Animator Animator;
+    public Collider2D Hitbox;
 
     [Header("States")]
     public State<Movement> IdleState;

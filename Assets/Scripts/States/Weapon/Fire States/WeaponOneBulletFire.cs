@@ -11,10 +11,14 @@ public class WeaponOneBulletFire : WeaponFireState
         fireDirection = SpreadVector(fireDirection);
 
         var bullet = Instantiate(_bulletPrefab, _machine.MainFirePoint.position,
-            Quaternion.Euler(0, 0, Vector2.Angle(Vector2.right, fireDirection)));
+            Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, fireDirection)));
         _machine.Upgrades.ApplyProjectileUpgrades(bullet);
 
-        bullet.Init(_machine.Weapon, fireDirection);
+        bullet.Init(
+            _machine.Weapon.Data.Damage, 
+            _machine.Weapon.Data.Damage * _machine.Weapon.Data.CritDamageMultiplier,
+            _machine.Weapon.Data.CritChance,
+            fireDirection);
         _machine.NotifyFire(this);
     }
 

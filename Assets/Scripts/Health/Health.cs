@@ -6,24 +6,56 @@ using UnityEngine;
 public class Health : MonoBehaviour, IBarNotificator
 {
     public event Action<float> OnValueChanged;
+    public event Action OnDamaged;
+    public event Action OnHeal;
 
     public float Max => _max;
     public float Current => _current;
+    public bool Poisoned => _currentPoisonTime > 0 && !_poisonImmune;
 
     public HealthType Type;
 
     [SerializeField] private float _max;
     [SerializeField] private float _current;
+    [SerializeField] private bool _poisonImmune;
 
     private float _healAmount;
+    private float _poisonDamage;
 
-    private void OnValidate()
+    private float _currentPoisonTime;
+    private float _timer;
+
+    public void SetPoison(float poisonTime, float poisonDamage)
     {
-        _current = Mathf.Clamp(_current, 0, _max);
+        _currentPoisonTime = poisonTime;
+        _poisonDamage = poisonDamage;
     }
 
-    public void TakeDamage(float amount) => AddHealth(-amount);
-    public void Heal(float amount) => AddHealth(amount);
+    private void Update()
+    {
+        if (_poisonImmune) return;
+        if (_currentPoisonTime <= 0) return;
+
+        _currentPoisonTime -= Time.deltaTime;
+        _timer += Time.deltaTime;
+        if (_timer >= 1)
+        {
+            TakeDamage(_poisonDamage);
+            _timer = 0;
+        }
+    }
+
+    public void TakeDamage(float amount)
+    {
+        AddHealth(-amount);
+        OnDamaged?.Invoke();
+    }
+    public void Heal(float amount) 
+    {
+        AddHealth(amount);
+        OnHeal?.Invoke();
+    }
+
     public void Heal(float amount, float rate) => StartCoroutine(Healing(amount, rate));
 
     private IEnumerator Healing(float amount, float rate)
@@ -35,6 +67,7 @@ public class Health : MonoBehaviour, IBarNotificator
         {
             var healed = Mathf.Min(rate, _healAmount);
             AddHealth(healed);
+            OnHeal?.Invoke();
             _healAmount -= healed;
 
             if (_current == _max)

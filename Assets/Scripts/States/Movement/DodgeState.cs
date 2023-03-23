@@ -16,25 +16,30 @@ public class DodgeState : State<Movement>
     public override void Init(Movement machine, State<Movement> from) 
     {
         base.Init(machine, from);
-
         if (!_canDodge)
         {
             SwitchState();
         }
         else
         {
-            _distance = 0f;
-            _canDodge = false;
             _dodgeDirection = _machine.Handler.DodgeDirection;
+            _machine.Hitbox.enabled = false;
             _machine.Animator.SetTrigger("dodge");
         }
+    }
+
+    public override void Exit()
+    {
+        _machine.Hitbox.enabled = true;
+        _distance = 0f;
+        _canDodge = false;
+        _machine.StartCoroutine(CooldownTimer());
     }
 
     public override void ChangeState()
     {
         if (_distance >= _dodgeDistance)
         {    
-            _machine.StartCoroutine(CooldownTimer());
             SwitchState();
         }
     }

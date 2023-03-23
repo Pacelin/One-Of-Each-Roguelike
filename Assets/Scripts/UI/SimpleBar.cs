@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,9 +18,7 @@ public class SimpleBar : MonoBehaviour
 
     private void OnValidate()
     {
-        _initialValue = Mathf.Clamp(_initialValue, Range.x, Range.y);
-        SetValue(_initialValue);
-        if (!_notificator.TryGetComponent<IBarNotificator>(out _))
+        if (_notificator != null && !_notificator.TryGetComponent<IBarNotificator>(out _))
             _notificator = null;
     }
 
@@ -43,16 +39,16 @@ public class SimpleBar : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    private void Update()
     {
         if (Notificator != null)
-            Notificator.OnValueChanged += SetValue;
-    }
-
-    private void OnDisable()
-    {
-        if (Notificator != null)
-            Notificator.OnValueChanged -= SetValue;
+        {
+            if (Notificator.GetMin() != Range.x || Notificator.GetMax() != Range.y)
+                SetRange(Notificator.GetMin(), Notificator.GetMax());
+            
+            if (Notificator.GetCurrent() != Value)
+                SetValue(Notificator.GetCurrent());   
+        }  
     }
 
     public void SetValue(float value)

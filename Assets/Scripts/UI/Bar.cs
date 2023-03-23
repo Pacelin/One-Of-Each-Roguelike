@@ -14,7 +14,6 @@ public class Bar : StateMachine<Bar>
     [Header("Settings")]
     public Vector2 Range;
     [SerializeField] private float _initialValue;
-    [SerializeField] private bool _animateOnAwake;
 
     [Header("States")]
     public State<Bar> IdleState;
@@ -61,10 +60,6 @@ public class Bar : StateMachine<Bar>
 
     private void OnValidate()
     {
-        _initialValue = Mathf.Clamp(_initialValue, Range.x, Range.y);
-        ActualBar.fillAmount = (_initialValue - Range.x) / RangeLength;
-        SetValue(_initialValue);
-
         if (_notificator != null && !_notificator.TryGetComponent<IBarNotificator>(out _))
             _notificator = null;
     }
@@ -94,16 +89,17 @@ public class Bar : StateMachine<Bar>
         _currentState.Init(this, null);
     }
 
-    private void OnEnable()
+    protected override void Update()
     {
         if (Notificator != null)
-            Notificator.OnValueChanged += SetValue;
-    }
-
-    private void OnDisable()
-    {
-        if (Notificator != null)
-            Notificator.OnValueChanged -= SetValue;
+        {
+            if (Notificator.GetMin() != Range.x || Notificator.GetMax() != Range.y)
+                SetRange(Notificator.GetMin(), Notificator.GetMax());
+            
+            if (Notificator.GetCurrent() != Value)
+                SetValue(Notificator.GetCurrent());   
+        }
+        base.Update();
     }
 
     public void SetValue(float value) =>

@@ -14,19 +14,24 @@ public class Upgrades : MonoBehaviour
     public void ApplyWeaponUpgrades()
     {
         WeaponController.Weapon.Data.Reset();
-        foreach(var upgrade in _list)
+        var sorted = _list.OrderByDescending(up => up.UpgradePriority);
+        foreach(var upgrade in sorted)
             upgrade.ApplyWeaponUpgrade(this, WeaponController.Weapon.Data, Player.Data);
     }
+    
     public void ApplyPlayerUpgrades()
     {
         Player.Data.Reset();
-        foreach(var upgrade in _list)
+        var sorted = _list.OrderByDescending(up => up.UpgradePriority);
+        foreach(var upgrade in sorted)
             upgrade.ApplyPlayerUpgrade(this, WeaponController.Weapon.Data, Player.Data);
+        Player.Data.Update();
     }
+
     public void ApplyProjectileUpgrades(Projectile projectile)
     {
-        Player.Data.Reset();
-        foreach(var upgrade in _list)
+        var sorted = _list.OrderByDescending(up => up.UpgradePriority);
+        foreach(var upgrade in sorted)
             upgrade.ApplyProjectileUpgrade(projectile, this, WeaponController.Weapon.Data, Player.Data);
     }
 
@@ -38,10 +43,11 @@ public class Upgrades : MonoBehaviour
         if (_list.Contains(upgrade)) return;
         AddUpgrade(upgrade);
     }
+
     public void AddUpgrade(Upgrade upgrade)
     {
         _list.Add(upgrade);
-        upgrade.ApplyWeaponUpgrade(this, WeaponController.Weapon.Data, Player.Data);
-        upgrade.ApplyPlayerUpgrade(this, WeaponController.Weapon.Data, Player.Data);
+        ApplyPlayerUpgrades();
+        ApplyWeaponUpgrades();
     }
 }

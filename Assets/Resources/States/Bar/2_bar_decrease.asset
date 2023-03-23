@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 2_bar_decrease
   m_EditorClassIdentifier: 
   _animationType: 2
-  _barAnimationSpeed: 5
-  _changesAnimationSpeed: 2
+  _barAnimationSpeed: 4
+  _changesAnimationSpeed: 1

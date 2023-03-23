@@ -44,6 +44,7 @@
      <Compile Include="Assets\Scripts\Health\Player.cs" />
      <Compile Include="Assets\Scripts\Weapon\WeaponData.cs" />
      <Compile Include="Assets\Scripts\Weapon\WeaponChargeData.cs" />
+     <Compile Include="Assets\Scripts\States\Weapon\Fire States\WeaponLaserExplosionFire.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Fire Rate States\WeaponWaitSerialFireRateAndReleaseState.cs" />
      <Compile Include="Assets\Scripts\States\UI\Bar\BarAnimationType.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Idle States\WeaponThrowableIdleState.cs" />
@@ -51,10 +52,13 @@
      <Compile Include="Assets\Scripts\Helpful\Extensions.cs" />
      <Compile Include="Assets\Scripts\States\UI\Bar\BarDecreaseState.cs" />
      <Compile Include="Assets\Scripts\States\Movement\DodgeState.cs" />
+     <Compile Include="Assets\Scripts\Projectiles\Laser.cs" />
+     <Compile Include="Assets\Scripts\States\Weapon\Fire States\WeaponLaserFire.cs" />
      <Compile Include="Assets\Scripts\Movement\Movement.cs" />
      <Compile Include="Assets\Scripts\Health\Health.cs" />
      <Compile Include="Assets\Scripts\States\Movement\WalkState.cs" />
      <Compile Include="Assets\Scripts\States\State.cs" />
+     <Compile Include="Assets\Scripts\Items\WeaponHolder.cs" />
      <Compile Include="Assets\Scripts\Upgrades\Upgrade.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Fire Rate States\WeaponWaitFireRateState.cs" />
      <Compile Include="Assets\Scripts\States\Movement\IdleState.cs" />
@@ -62,7 +66,9 @@
      <Compile Include="Assets\Scripts\States\StateMachine.cs" />
      <Compile Include="Assets\Scripts\UI\ReloadingView.cs" />
      <Compile Include="Assets\Scripts\Weapon\WeaponController.cs" />
+     <Compile Include="Assets\Scripts\Items\Chest.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Fire States\WeaponOneBulletFire.cs" />
+     <Compile Include="Assets\Scripts\Movement\CameraLookAt.cs" />
      <Compile Include="Assets\Scripts\Health\PlayerData.cs" />
      <Compile Include="Assets\Scripts\Items\ItemQuality.cs" />
      <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
@@ -73,13 +79,28 @@
      <Compile Include="Assets\Scripts\Items\Item.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Fire States\WeaponChargableFireState.cs" />
      <Compile Include="Assets\Scripts\UI\SimpleBar.cs" />
+     <Compile Include="Assets\Scripts\Items\ChestFactory.cs" />
      <Compile Include="Assets\Scripts\Movement\MovementHandler.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Reload States\WeaponInvisibleReloadState.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Fire Rate States\WeaponWaitSerialFireRateState.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Fire Rate States\WeaponWaitFireRateAndReleaseState.cs" />
+     <Compile Include="Assets\Scripts\Items\ChestSpawnPoint.cs" />
      <Compile Include="Assets\Scripts\States\UI\Bar\BarIdleState.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Fire States\WeaponFireState.cs" />
      <Compile Include="Assets\Scripts\Movement\MovementInputHandler.cs" />
+     <Compile Include="Assets\Scripts\Bosses\Boss.cs" />
+     <Compile Include="Assets\Scripts\Bosses\BossWithPistols.cs" />
+     <Compile Include="Assets\Scripts\Bosses\States\BossPrepareState.cs" />
+     <Compile Include="Assets\Scripts\Bosses\States\BossWithPistols\BossWithPistolsMovementState.cs" />
+     <Compile Include="Assets\Scripts\Bosses\States\BossWithPistols\BossWithPistolsTargetFiringState.cs" />
+     <Compile Include="Assets\Scripts\Helpful\Door.cs" />
+     <Compile Include="Assets\Scripts\Helpful\BossKilledTrigger.cs" />
+     <Compile Include="Assets\Scripts\Helpful\ColliderEnterTrigger.cs" />
+     <Compile Include="Assets\Scripts\Helpful\ColliderExitTrigger.cs" />
+     <Compile Include="Assets\Scripts\Helpful\Trigger.cs" />
+     <Compile Include="Assets\Scripts\Bosses\States\BossWithPistols\BossWithPistolsStayState.cs" />
+     <Compile Include="Assets\Scripts\Bosses\States\BossWithPistols\BossWithPistolsAroundFiringState.cs" />
+     <Compile Include="Assets\Scripts\States\Weapon\NoWeaponState.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity Editors\2021.3.21f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
