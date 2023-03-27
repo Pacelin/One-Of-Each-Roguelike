@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Laser : Projectile
@@ -34,7 +31,6 @@ public class Laser : Projectile
         var raycast = Physics2D.RaycastAll(_startPos, _fireDirection, _maxDistance);
         
         var currentPenetrations = 0;
-
         foreach (var hit in raycast)
         {
             if (hit.transform.CompareTag("wall"))
@@ -45,18 +41,26 @@ public class Laser : Projectile
             else
             {
                 var health = hit.collider.gameObject.GetComponent<Health>();
-                if (health == null || health.Type != _damageableHealthType) continue;
-                if (_applyDamage) Hit(health);
+                if (health == null || health.Type != _damageableHealthType)
+                    continue;
+                
+
+                if (_applyDamage)
+                {
+                    Hit(health);
+                }
+                
                 if (_penetrationsCount == currentPenetrations)
                 {
                     endPos = hit.point;
                     break;
                 }
+
                 currentPenetrations++;
             }
         }
 
-        _lineRenderer.SetPositions(new Vector3[] {_startPos, endPos });
+        _lineRenderer.SetPositions(new Vector3[] { _startPos, endPos });
         _applyDamage = false;
     }
 }

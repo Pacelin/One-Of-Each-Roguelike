@@ -24,6 +24,7 @@ public class Health : MonoBehaviour, IBarNotificator
 
     private float _currentPoisonTime;
     private float _timer;
+    private bool _canDamaged = true;
 
     public void SetPoison(float poisonTime, float poisonDamage)
     {
@@ -31,10 +32,10 @@ public class Health : MonoBehaviour, IBarNotificator
         _poisonDamage = poisonDamage;
     }
 
+    public void SetCanDamaged(bool canDamaged) => _canDamaged = canDamaged;
     private void Update()
     {
-        if (_poisonImmune) return;
-        if (_currentPoisonTime <= 0) return;
+        if (_poisonImmune || !_canDamaged || _currentPoisonTime <= 0) return;
 
         _currentPoisonTime -= Time.deltaTime;
         _timer += Time.deltaTime;
@@ -47,6 +48,8 @@ public class Health : MonoBehaviour, IBarNotificator
 
     public void TakeDamage(float amount)
     {
+        if (!_canDamaged) return;
+
         AddHealth(-amount);
         OnDamaged?.Invoke();
     }

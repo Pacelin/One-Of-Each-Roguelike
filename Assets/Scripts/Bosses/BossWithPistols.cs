@@ -16,7 +16,7 @@ public class BossWithPistols : Boss
     public float AngryHealthThreshold;
     public float AngryHealing;
 
-    [Space]
+    [Header("States")]
     public State<Boss> StayState;
     public State<Boss> MovementState;
     public State<Boss> TargetFireState;

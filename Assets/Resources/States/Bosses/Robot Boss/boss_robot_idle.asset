@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895462a554e8197469478ed9d97c0339, type: 3}
+  m_Name: boss_robot_idle
+  m_EditorClassIdentifier: 
+  _idleTime: 0.3
+  _moveChanceMin: 3
+  _moveChanceDelta: 2
+  _birthChanceMin: 1
+  _birthChanceDelta: 1
+  _laserAroundFireChanceMin: 1
+  _laserAroundFireChanceDelta: 1
+  _laserTargetFireChanceMin: 1
+  _laserTargetFireChanceDelta: 1

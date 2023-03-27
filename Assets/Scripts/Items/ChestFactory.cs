@@ -1,11 +1,19 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChestFactory : MonoBehaviour
 {
     [SerializeField] private Chest _prefab;
     [SerializeField] private WeaponController _weaponController;
+    [SerializeField] private GameObject _weaponInfo;
+    [SerializeField] private TMP_Text _weaponNameText;
+    [SerializeField] private TMP_Text _weaponDescriptionText;
+    [SerializeField] private TMP_Text _weaponQualityText;
+    [SerializeField] private Image _weaponImage;
+    [SerializeField] private ItemQualityColors _qualityColors;
 
     [Header("Chests")]
     [SerializeField] private Sprite _commonTop;
@@ -39,19 +47,26 @@ public class ChestFactory : MonoBehaviour
         _rareWeapons = Resources.LoadAll<Weapon>("Weapons/Rare");
         _uncommonWeapons = Resources.LoadAll<Weapon>("Weapons/Uncommon");
         _legendaryWeapons = Resources.LoadAll<Weapon>("Weapons/Legendary");
+        _weaponInfo.SetActive(false);
     }
 
     public void SpawnChest(Vector2 position, float[] chances)
     {
         var chest = Instantiate(_prefab, position, Quaternion.identity);
         float p = 0;
-        float random = Random.Range(0, 1);
+        float random = Random.Range(0f, 1f);
         chest.Controller = _weaponController;
+        chest.WeaponInfo = _weaponInfo;
+        chest.WeaponImage = _weaponImage;
+        chest.WeaponNameText = _weaponNameText;
+        chest.WeaponDescriptionText = _weaponDescriptionText;
+        chest.WeaponQualityText = _weaponQualityText;
+        chest.QualityColors = _qualityColors;
 
         for (int i = 0; i < chances.Length; i++)
         {
             p += chances[i];
-            if (random <= p)
+            if (random < p)
             {
                 if (i == 0)
                 {
@@ -82,7 +97,7 @@ public class ChestFactory : MonoBehaviour
     private Weapon GetRandomWeapon(int quality)
     {
         float p = 0;
-        float random = Random.Range(0, 1);
+        float random = Random.Range(0f, 1f);
         float[] chances;
 
         if (quality == 0)

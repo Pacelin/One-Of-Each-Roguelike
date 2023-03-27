@@ -40,7 +40,10 @@ public class WeaponController : StateMachine<WeaponController>, IBarNotificator
         _currentState = _noWeaponState;
 
         if (_initialWeapon != null)
+        {
             SetWeapon(_initialWeapon);
+            SwitchState(_initialWeapon.IdleState);
+        }
     }
 
     protected override void Update()
@@ -52,6 +55,7 @@ public class WeaponController : StateMachine<WeaponController>, IBarNotificator
 
     public void SwitchWeapon(Weapon newWeapon)
     {
+        SwitchState(_noWeaponState);
         ResetWeapon(Weapon);
         SetWeapon(newWeapon);
         SwitchState(Weapon.IdleState);

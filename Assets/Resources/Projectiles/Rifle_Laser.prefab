@@ -66,7 +66,7 @@ LineRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 48b16468093d17248bea4c24c1eb635a, type: 2}
@@ -88,11 +88,11 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 365241999
-  m_SortingLayer: -1
-  m_SortingOrder: 5
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 5, y: 0, z: 0}
+  - {x: 1.22, y: -2.01, z: 0}
+  - {x: 5, y: -2.01, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.5

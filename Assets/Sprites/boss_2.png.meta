@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: boss_2_back
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68749718c0fad3e4ea68bcfa64ca37d6
+      internalID: 1519210146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_2_front_mini
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 390
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c58c31a5d4337e42af8cec74853e937
+      internalID: 313118791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_2_front
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 362
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dfce0dbb7da86142a4d3d98cbdb86a3
+      internalID: 698751119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_2_front_leg
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 30
+        width: 178
+        height: 352
+      alignment: 9
+      pivot: {x: 0.84538406, y: 0.44626027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055a11736fbdf674e8573fdd096a6181
+      internalID: 1793124912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_2_back_leg
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 39
+        width: 169
+        height: 334
+      alignment: 9
+      pivot: {x: 0.8777687, y: 0.43628472}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d338b2efff9674dba0c8ec6025ceba
+      internalID: 1651674630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +255,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boss_2_back: 1519210146
+      boss_2_back_leg: 1651674630
+      boss_2_front: 698751119
+      boss_2_front_leg: 1793124912
+      boss_2_front_mini: 313118791
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

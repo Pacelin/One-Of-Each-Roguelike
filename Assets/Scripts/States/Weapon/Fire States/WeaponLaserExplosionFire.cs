@@ -16,10 +16,11 @@ public class WeaponLaserExplosionFire : WeaponFireState
     public override void CreateFirePoints(Transform parent)
     {
         _laser = Instantiate(_laserPrefab, Vector3.zero, Quaternion.identity, parent);
+        _laser.DisableLaser();
     }
     public override void RemoveFirePoints()
     {
-        Destroy(_laser);
+        Destroy(_laser.gameObject);
     }
 
     public override void Exit()
@@ -31,7 +32,6 @@ public class WeaponLaserExplosionFire : WeaponFireState
     {
         base.Fire(fireDirection);
         fireDirection = SpreadVector(fireDirection);
-        _machine.Upgrades.ApplyProjectileUpgrades(_laser);
         _timer = 0;
 
         _laser.Init(
@@ -39,7 +39,8 @@ public class WeaponLaserExplosionFire : WeaponFireState
             _machine.Weapon.Data.Damage * _machine.Weapon.Data.CritDamageMultiplier,
             _machine.Weapon.Data.CritChance,
             fireDirection);
-
+        
+        _machine.Upgrades.ApplyProjectileUpgrades(_laser);
         _laser.SetStartPosition(_machine.MainFirePoint.position);
         _laser.SetDirection(_machine.transform.right);
         _laser.EnableLaser();

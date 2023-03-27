@@ -19,6 +19,8 @@ public class WeaponOneBulletFire : WeaponFireState
             _machine.Weapon.Data.Damage * _machine.Weapon.Data.CritDamageMultiplier,
             _machine.Weapon.Data.CritChance,
             fireDirection);
+
+        _machine.Upgrades.ApplyProjectileUpgrades(bullet);
         _machine.NotifyFire(this);
     }
 

@@ -11,10 +11,11 @@ public class WeaponLaserFire : WeaponFireState
     public override void CreateFirePoints(Transform parent)
     {
         _laser = Instantiate(_laserPrefab, Vector3.zero, Quaternion.identity, parent);
+        _laser.DisableLaser();
     }
     public override void RemoveFirePoints()
     {
-        Destroy(_laser);
+        Destroy(_laser.gameObject);
     }
 
     public override void Exit()
@@ -25,14 +26,13 @@ public class WeaponLaserFire : WeaponFireState
     public override void Fire(Vector2 fireDirection)
     {
         base.Fire(fireDirection);
-        fireDirection = SpreadVector(fireDirection);
-        _machine.Upgrades.ApplyProjectileUpgrades(_laser);
 
         _laser.Init(
             _machine.Weapon.Data.Damage, 
             _machine.Weapon.Data.Damage * _machine.Weapon.Data.CritDamageMultiplier,
             _machine.Weapon.Data.CritChance,
             fireDirection);
+        _machine.Upgrades.ApplyProjectileUpgrades(_laser);
         Update();
         _laser.EnableLaser();
     }
@@ -46,9 +46,18 @@ public class WeaponLaserFire : WeaponFireState
         if (_timer >= 1 / _machine.Weapon.Data.FireRate)
         {
             _timer = 0;
+            
+            _machine.Weapon.BulletsInClip--;
+            
+            _laser.Init(
+                _machine.Weapon.Data.Damage, 
+                _machine.Weapon.Data.Damage * _machine.Weapon.Data.CritDamageMultiplier,
+                _machine.Weapon.Data.CritChance,
+                _machine.transform.right);
+            _machine.Upgrades.ApplyProjectileUpgrades(_laser);
+
             _laser.ApplyDamage();
             _machine.NotifyFire(this);
-            _machine.Weapon.BulletsInClip--;
         }
     }
 
