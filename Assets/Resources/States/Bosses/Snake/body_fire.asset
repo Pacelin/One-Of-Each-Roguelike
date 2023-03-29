@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acb3440198bcd0b479d4dcd419bbee90, type: 3}
-  m_Name: 0_bar_idle
+  m_Script: {fileID: 11500000, guid: dbd83cff423efd54ba04af55999880bf, type: 3}
+  m_Name: body_fire
   m_EditorClassIdentifier: 
+  _distanceToPart: 1.8
+  _bulletPrefab: {fileID: 1180524998123423755, guid: c9ada0739756a0644b7d050ed28ab56b, type: 3}

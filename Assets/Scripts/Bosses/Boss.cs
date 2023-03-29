@@ -28,7 +28,7 @@ public abstract class Boss : StateMachine<Boss>
         PrepareState.Init(this, null);
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         Health.OnValueChanged += OnHealthChanged;
         Health.OnDamaged += OnDamaged;
@@ -36,7 +36,7 @@ public abstract class Boss : StateMachine<Boss>
         _activationTrigger.OnTrigger += Activate;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         Health.OnValueChanged -= OnHealthChanged;
         Health.OnDamaged -= OnDamaged;

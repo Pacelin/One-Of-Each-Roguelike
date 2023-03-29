@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "\u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442 \u043D\u0430\u043D\u043E\u0441\u0438\u043C\u044B\u0439
     \u0443\u0440\u043E\u043D"
   Quality: 0
-  Sprite: {fileID: 526438834, guid: 12e641e38d1b1924398fbcd0a819991b, type: 3}
+  Sprite: {fileID: -1188747250, guid: 12e641e38d1b1924398fbcd0a819991b, type: 3}
   Uniq: 0
   UpgradePriority: 0
   _percent: 0.1

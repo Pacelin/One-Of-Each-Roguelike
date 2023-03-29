@@ -141,15 +141,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gems_0
+      name: crit_damage_gem
       rect:
         serializedVersion: 2
-        x: 246
-        y: 1
-        width: 72
-        height: 63
+        x: 10
+        y: 282
+        width: 93
+        height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,6 +157,258 @@ TextureImporter:
       bones: []
       spriteID: 754b13772b9b85844baba3dbfc0c38d5
       internalID: 526438834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: damage_gem
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 282
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af59b17726633f14699b0e51042a45d3
+      internalID: -1188747250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire_rate_gem
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 282
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56c692799ce25643923d05051a77b13
+      internalID: 463051769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crit_chance_gem
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 195
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b8a50389aed2f48b6eef11544d06f3
+      internalID: 573216935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clip_size_gem
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 195
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7692011c21eb6ff4bab4030e74c9417a
+      internalID: -871460383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: extra_gem
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 195
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ad6660f1fc1ce46b138b9c051daaa8
+      internalID: 496177627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_speed_gem
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 195
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a5ab0a738bf9e4493e1493d85b704c
+      internalID: -522945349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reload_speed_gem
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 195
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1261324f5d7803438138a7ba754b1c2
+      internalID: 348201176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alpha_gem
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 108
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e925fc7f65d8ef498cccdde92f337aa
+      internalID: -1631982748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: omega_gem
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 108
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c481a73786fdc2d43a3311a2a3e05926
+      internalID: -819563167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mario_gem
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 108
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2e615ac3ae65f43b3c8dbdbd5151ce
+      internalID: -1370910845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_in_one_gem
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 21
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0b9e5921b28db4db4602550507b22e
+      internalID: 1599947217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: increment_gem
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 21
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845be90efd7d1a44a8e10db809a1d765
+      internalID: -1808097251
       vertices: []
       indices: 
       edges: []
@@ -172,7 +424,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gems_0: 526438834
+      all_in_one_gem: 1599947217
+      alpha_gem: -1631982748
+      bullet_speed_gem: -522945349
+      clip_size_gem: -871460383
+      crit_chance_gem: 573216935
+      crit_damage_gem: 526438834
+      damage_gem: -1188747250
+      extra_gem: 496177627
+      fire_rate_gem: 463051769
+      increment_gem: -1808097251
+      mario_gem: -1370910845
+      omega_gem: -819563167
+      reload_speed_gem: 348201176
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -12,6 +12,7 @@ public abstract class Projectile : MonoBehaviour
 
     public float CritChance => _critChance;
     protected float _critChance;
+    
     protected Vector2 _fireDirection;
 
     public virtual void Init(float damage, float critDamage, float critChance, Vector2 direction)

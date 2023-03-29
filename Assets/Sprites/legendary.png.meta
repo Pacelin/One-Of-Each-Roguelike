@@ -182,6 +182,237 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: legendary_knife_gun
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 323
+        width: 234
+        height: 88
+      alignment: 9
+      pivot: {x: 0.3432854, y: 0.37243307}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95d3ea79c1746647be09f86f0035ab4
+      internalID: 318144811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_knife
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 371
+        width: 135
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c930c0f4fbe3f0488a8f40749015d75
+      internalID: 44279473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_strong_knife
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 309
+        width: 101
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe59e993552ba44bb948140499c52ef
+      internalID: 440226416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_penta_gun
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 152
+        width: 176
+        height: 111
+      alignment: 9
+      pivot: {x: 0.16279684, y: 0.18840756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6851d1ba6c2327d449b9f1dff8bdff9f
+      internalID: 251270211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_penta_bullet_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 269
+        width: 74
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602896b7afb46db4e9f0b8b7ada3c207
+      internalID: -1165063512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_penta_bullet_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 245
+        width: 74
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb320376d1d263040bcd1653fb79a888
+      internalID: 559871997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_penta_bullet_3
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 208
+        width: 72
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75e36b6d78a62244bcaaeac868a97e9
+      internalID: 984027783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_penta_bullet_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 185
+        width: 74
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69c4f50a6edf2c48bdab08938ca9f7b
+      internalID: -604769555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_penta_bullet_5
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 163
+        width: 74
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe0c42593bdec04caa028ffb49a5523
+      internalID: -651122184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_plus_ultra
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 129
+        height: 133
+      alignment: 9
+      pivot: {x: 0.24602076, y: 0.49152735}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa3536b8b8ebd24f88e7ecdb336a6dc
+      internalID: 611308760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legendary_plus_ultra_missle
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 77
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c28f45c61838c34a8f5f88324aa6f17
+      internalID: 319060230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -195,6 +426,17 @@ TextureImporter:
     nameFileIdTable:
       legendary_chest_bottom: 1378020435
       legendary_chest_top: -1241155361
+      legendary_knife: 44279473
+      legendary_knife_gun: 318144811
+      legendary_penta_bullet_1: -1165063512
+      legendary_penta_bullet_2: 559871997
+      legendary_penta_bullet_3: 984027783
+      legendary_penta_bullet_4: -604769555
+      legendary_penta_bullet_5: -651122184
+      legendary_penta_gun: 251270211
+      legendary_plus_ultra: 611308760
+      legendary_plus_ultra_missle: 319060230
+      legendary_strong_knife: 440226416
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

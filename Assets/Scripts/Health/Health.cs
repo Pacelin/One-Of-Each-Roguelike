@@ -88,7 +88,7 @@ public class Health : MonoBehaviour, IBarNotificator
         OnValueChanged?.Invoke(_current);
     }
 
-    public float GetMin() => 0;
-    public float GetMax() => _max;
-    public float GetCurrent() => _current;
+    public virtual float GetMin() => 0;
+    public virtual float GetMax() => _max;
+    public virtual float GetCurrent() => _current;
 }

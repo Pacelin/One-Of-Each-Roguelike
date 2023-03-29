@@ -182,6 +182,258 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: uncommon_cannon
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 216
+        width: 197
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1840036, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81a85ae31d2d714e96125c2a60993f1
+      internalID: 1379595987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_cannon_bullet
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 229
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c97ab829a8bd944904467a5b7c537c
+      internalID: 2103634778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_flinker
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 149
+        width: 248
+        height: 58
+      alignment: 9
+      pivot: {x: 0.22261414, y: 0.4025158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d688e566c6e4504cb4901a5348c0b47
+      internalID: 2098541006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_flinker_bullet
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 161
+        width: 23
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0082a4ca016560344be89634afa23eae
+      internalID: -1034321426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_shotgun
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 94
+        width: 127
+        height: 49
+      alignment: 9
+      pivot: {x: 0.19859536, y: 0.30663565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421d5bb743bfa0f4c8835ca811388f60
+      internalID: 10991853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_shotgun_fire
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 101
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c338c70970106e489c7c562d4b0fe37
+      internalID: -952377289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_popcorn_gun
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 115
+        height: 89
+      alignment: 9
+      pivot: {x: 0.23793209, y: 0.48941815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713d612dd5f1e924ba02090e07a78a69
+      internalID: 1924819489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_popcorn_1
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 67
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bfd0a1f7800b04459a493e9e06fa65e
+      internalID: -155522680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_popcorn_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 64
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d0da60cba17844d8935864c0981f5b
+      internalID: -953607116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_popcorn_3
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 36
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7985fcff2ed52747bfc34a1d76d263d
+      internalID: 1061131554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_popcorn_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 31
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfb5408d97704e418693cca16c9350f
+      internalID: -2032545218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uncommon_popcorn_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 9
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8562d6d9d27e9042bd2989fd7ab3b0f
+      internalID: 1411200385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -193,8 +445,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      uncommon_cannon: 1379595987
+      uncommon_cannon_bullet: 2103634778
       uncommon_chest_bottom: -679181034
       uncommon_chest_top: 91441641
+      uncommon_flinker: 2098541006
+      uncommon_flinker_bullet: -1034321426
+      uncommon_popcorn_1: -155522680
+      uncommon_popcorn_2: -953607116
+      uncommon_popcorn_3: 1061131554
+      uncommon_popcorn_4: -2032545218
+      uncommon_popcorn_5: 1411200385
+      uncommon_popcorn_gun: 1924819489
+      uncommon_shotgun: 10991853
+      uncommon_shotgun_fire: -952377289
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

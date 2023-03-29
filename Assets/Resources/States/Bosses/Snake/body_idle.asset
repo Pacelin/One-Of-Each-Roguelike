@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54b1567befa8f2c4891b459907253a7f, type: 3}
-  m_Name: 2_bar_decrease
+  m_Script: {fileID: 11500000, guid: ab12aa952e7a7d64eb4f61c57e09dd47, type: 3}
+  m_Name: body_idle
   m_EditorClassIdentifier: 
-  _animationType: 2
-  _barAnimationSpeed: 5
-  _changesAnimationSpeed: 2
+  _distanceToPart: 1.8
+  _delay: 1.5
