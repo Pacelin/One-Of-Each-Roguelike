@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: keglya
   m_EditorClassIdentifier: 
   Name: "\u041A\u0435\u0433\u043B\u044F"
-  Description: "\u0422\u0435\u043F\u0435\u0440\u044C \u043A\u0435\u0433\u043B\u044F\u043C\u0438
-    \u0431\u044C\u0435\u043C \u0448\u0430\u0440\u044B"
+  Description: "\u041A\u0435\u0433\u043B\u044F\u043C\u0438 \u0431\u044C\u0435\u043C
+    \u0448\u0430\u0440\u044B\n\n\u0417\u0430\u0436\u043C\u0438\u0442\u0435, \u0447\u0442\u043E\u0431\u044B
+    \u0441\u0442\u0440\u0435\u043B\u044F\u0442\u044C"
   Quality: 0
   BulletsInClip: 1
   Sprite: {fileID: 1822018395, guid: 7609db00fab9c47418bed9966ba6d37d, type: 3}

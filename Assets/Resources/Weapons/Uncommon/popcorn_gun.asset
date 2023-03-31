@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a655267e6b664f5459488ea7662d2c28, type: 3}
+  m_Name: popcorn_gun
+  m_EditorClassIdentifier: 
+  Name: "\u041F\u043E\u043F\u043A\u043E\u0440\u043D"
+  Description: "\u041A\u0442\u043E-\u0442\u043E \u043E\u0441\u0442\u0430\u0432\u0438\u043B
+    \u0435\u0433\u043E \u0432 \u043A\u0438\u043D\u043E\u0442\u0435\u0430\u0442\u0440\u0435..."
+  Quality: 2
+  BulletsInClip: 100
+  Sprite: {fileID: 1924819489, guid: e556105a501d1cc479613abdf71b4327, type: 3}
+  FireSound: {fileID: 0}
+  ReloadSound: {fileID: 0}
+  Data:
+    BaseDamage: 4
+    BaseCritDamageMultiplier: 2
+    BaseCritChance: 0.5
+    BaseReloadTime: 0.2
+    BaseClipSize: 100
+    BaseFireRate: 30
+    BaseSpread: 90
+  MainFirePosition: {x: 0.65, y: 0}
+  IdleState: {fileID: 11400000, guid: fc20a155de832cc478a7dafa0c5a8fd8, type: 2}
+  FireState: {fileID: 11400000, guid: 0b978b1ad035072428621f0ace89d0e5, type: 2}
+  SecondFireState: {fileID: 0}
+  WaitFireRateState: {fileID: 11400000, guid: 8b63f881b7e454544b4e2b3b72821abb, type: 2}
+  ReloadState: {fileID: 11400000, guid: b8dd8a39fb05aee41beb2a74c17f2a8b, type: 2}

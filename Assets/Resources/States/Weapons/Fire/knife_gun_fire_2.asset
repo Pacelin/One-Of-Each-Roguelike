@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0addc28f17faf1248a40dfbe39bef124, type: 3}
+  m_Name: knife_gun_fire_2
+  m_EditorClassIdentifier: 
+  _bulletPrefab: {fileID: -3166846666950897028, guid: 605648102f971b9498f666adf29f5878, type: 3}
+  _fireAngles:
+  - -10
+  - -5
+  - 0
+  - 5
+  - 10
+  _fireOffsets:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}

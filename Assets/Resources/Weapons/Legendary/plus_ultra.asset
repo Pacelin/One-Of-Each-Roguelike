@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a655267e6b664f5459488ea7662d2c28, type: 3}
+  m_Name: plus_ultra
+  m_EditorClassIdentifier: 
+  Name: PLUS ULTRA
+  Description: "\u0412\u0441\u0435\u043C\u043E\u0433\u0443\u0449\u0435\u0435 \u043E\u0440\u0443\u0436\u0438\u0435"
+  Quality: 3
+  BulletsInClip: 126
+  Sprite: {fileID: 611308760, guid: d8b7a325a5415124fa0aad8102d1a521, type: 3}
+  FireSound: {fileID: 0}
+  ReloadSound: {fileID: 0}
+  Data:
+    BaseDamage: 2
+    BaseCritDamageMultiplier: 1.5
+    BaseCritChance: 0.2
+    BaseReloadTime: 2
+    BaseClipSize: 100
+    BaseFireRate: 50
+    BaseSpread: 5
+  MainFirePosition: {x: 0.9, y: 0}
+  IdleState: {fileID: 11400000, guid: fc20a155de832cc478a7dafa0c5a8fd8, type: 2}
+  FireState: {fileID: 11400000, guid: 44d21d9c773d603498aefc3deffc70cf, type: 2}
+  SecondFireState: {fileID: 0}
+  WaitFireRateState: {fileID: 11400000, guid: 8b63f881b7e454544b4e2b3b72821abb, type: 2}
+  ReloadState: {fileID: 11400000, guid: 9ba23daefad746b439cfdaa444e44887, type: 2}

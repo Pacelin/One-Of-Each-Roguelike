@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -94,7 +95,11 @@ public class UpgradesFactory : MonoBehaviour
 
     private Upgrade GetRandomUpgrade(Upgrade[] array)
     {
-        if (array.Length == 0) return null;
+        array = array.Where(upgrade => _upgrades.CanUpgrade(upgrade)).ToArray();
+        
+        if (array.Length == 0) 
+            GetRandomUpgrade(_commonUpgrades);
+
         return array[Random.Range(0, array.Length)];
     }
 }

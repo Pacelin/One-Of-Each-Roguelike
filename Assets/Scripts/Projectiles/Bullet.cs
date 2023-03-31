@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
@@ -11,7 +10,6 @@ public class Bullet : Projectile
     [SerializeField] private float _rotationSpeed;
 
     [SerializeField] private int _penetrationCount = 0;
-    [SerializeField] private int _bouncesCount = 0;
 
     public override void Init(float damage, float critDamage, float critChance, Vector2 direction)
     {
@@ -19,43 +17,10 @@ public class Bullet : Projectile
         _rigidbody.velocity = _fireDirection * _bulletSpeed;
         _rigidbody.angularVelocity = _rigidbody.velocity.x < 0 ? -_rotationSpeed : _rotationSpeed;
     }
-    
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("wall"))
-        {
-            if (_bouncesCount > 0)
-            {
-                _bouncesCount--;
-                Reflect(collision);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-        else
-        {
-            var health = collision.gameObject.GetComponent<Health>();
-            if (health == null || health.Type != _damageableHealthType) return;
-
-            Hit(health);
-
-            if (_bouncesCount > 0)
-            {
-                _bouncesCount--;
-                Reflect(collision);
-            }
-            else if (_penetrationCount > 0)
-            {
-                _penetrationCount--;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-    }*/
+    public override void IncreaseSpeed(float value, float percent)
+    { 
+        _rigidbody.velocity = _rigidbody.velocity.normalized * (_rigidbody.velocity.magnitude + value + _rigidbody.velocity.magnitude * percent);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -69,14 +34,7 @@ public class Bullet : Projectile
         if (health == null || health.Type != _damageableHealthType) return;
 
         Hit(health);
-        Destroy(gameObject);
+        if (_penetrationCount-- <= 0)
+            Destroy(gameObject);
     }
-
-    private void Reflect(Collision2D collision)
-    {
-        var newDirection = Vector2.Reflect(_rigidbody.velocity, collision.contacts[0].normal).normalized;
-        _rigidbody.velocity = newDirection * _bulletSpeed;
-        transform.right = _rigidbody.velocity;
-    }
-
 }

@@ -15,3 +15,16 @@ public static class TransformExtension
         return tr;
     }
 }
+
+public static class Vector2Extension
+{
+    public static Vector2 Rotate(this Vector2 vector, float angle)
+    {
+        var sin = Mathf.Sin(angle * Mathf.Deg2Rad);
+        var cos = Mathf.Cos(angle * Mathf.Deg2Rad);
+        return new Vector2(
+            vector.x * cos - vector.y * sin,
+            vector.x * sin + vector.y * cos
+        );
+    }
+}

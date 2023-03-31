@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 367315f920a6dda4ca5faec379c41508, type: 3}
+  m_Name: penta_fire
+  m_EditorClassIdentifier: 
+  _laserPrefabs:
+  - {fileID: 1113157407267997806, guid: 5c2907049743f1b4ea25eeb05b8f3b82, type: 3}
+  - {fileID: 1113157407267997806, guid: c2d6e828275a1764980da16bde47116f, type: 3}
+  - {fileID: 1113157407267997806, guid: 1144c5e7fc6549f4796229cff4850d20, type: 3}
+  - {fileID: 1113157407267997806, guid: 37dd455b735a933459b5ef3915f235ae, type: 3}
+  - {fileID: 1113157407267997806, guid: 388052cc15c859241b838c0921dab643, type: 3}
+  _laserPositions:
+  - {x: -0.35, y: 0.3}
+  - {x: -0.15, y: 0.18}
+  - {x: 0, y: 0}
+  - {x: -0.16, y: -0.18}
+  - {x: -0.3, y: -0.3}

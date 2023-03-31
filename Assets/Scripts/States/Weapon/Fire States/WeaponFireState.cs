@@ -30,7 +30,5 @@ public abstract class WeaponFireState : State<WeaponController>
     }
 
     protected Vector2 SpreadVector(Vector2 fireDirection) =>
-        Quaternion.AngleAxis(
-            Random.Range(-_machine.Weapon.Data.Spread / 2, _machine.Weapon.Data.Spread / 2),
-            Vector3.forward) * fireDirection;
+        fireDirection.Rotate(Random.Range(-_machine.Weapon.Data.Spread / 2, _machine.Weapon.Data.Spread / 2));
 }

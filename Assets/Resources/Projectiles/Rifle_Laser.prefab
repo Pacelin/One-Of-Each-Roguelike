@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageableHealthType: 0
+  IsPoisoned: 0
   _lineRenderer: {fileID: 5914667938106860083}
   _penetrationsCount: 0
-  _maxDistance: 30
+  _maxDistance: 50
 --- !u!120 &5914667938106860083
 LineRenderer:
   m_ObjectHideFlags: 0

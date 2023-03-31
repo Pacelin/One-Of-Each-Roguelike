@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bacfdf468d7ca9849bbe43f9b0a3afa8, type: 3}
   m_Name: boss_robot_target_laser_fire
   m_EditorClassIdentifier: 
-  _angleOffset: 40
-  _laserSpeed: 40
+  _angleOffset: 50
+  _laserSpeed: 30
   _fireTime: 5

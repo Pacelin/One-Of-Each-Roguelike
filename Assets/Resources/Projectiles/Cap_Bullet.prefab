@@ -100,12 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageableHealthType: 0
+  IsPoisoned: 0
   _rigidbody: {fileID: 1180524998123423754}
   _collider: {fileID: 1180524998123423753}
-  _bulletSpeed: 7
-  _rotationSpeed: 1
+  _bulletSpeed: 8
+  _rotationSpeed: 10
   _penetrationCount: 0
-  _bouncesCount: 0
 --- !u!50 &1180524998123423754
 Rigidbody2D:
   serializedVersion: 4

@@ -45,4 +45,8 @@ public class Upgrades : MonoBehaviour
         ApplyPlayerUpgrades();
         ApplyWeaponUpgrades();
     }
+    public bool CanUpgrade(Upgrade upgrade)
+    {
+        return !upgrade.Uniq || !_list.Contains(upgrade);
+    }
 }

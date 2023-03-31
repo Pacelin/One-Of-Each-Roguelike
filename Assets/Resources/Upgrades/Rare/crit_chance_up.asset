@@ -19,5 +19,5 @@ MonoBehaviour:
   Sprite: {fileID: 573216935, guid: 12e641e38d1b1924398fbcd0a819991b, type: 3}
   Uniq: 0
   UpgradePriority: 0
-  _percent: 0
-  _value: 0.1
+  _percent: 0.1
+  _value: 0

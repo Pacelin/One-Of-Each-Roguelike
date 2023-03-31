@@ -15,8 +15,8 @@ MonoBehaviour:
   _idleTime: 0.3
   _moveChanceMin: 3
   _moveChanceDelta: 2
-  _birthChanceMin: 1
-  _birthChanceDelta: 1
+  _birthChanceMin: 0.5
+  _birthChanceDelta: 0.75
   _laserAroundFireChanceMin: 1
   _laserAroundFireChanceDelta: 1
   _laserTargetFireChanceMin: 1

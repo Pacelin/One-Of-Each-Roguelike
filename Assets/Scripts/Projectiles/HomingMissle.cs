@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
 public class HomingMissle : Projectile
@@ -8,14 +9,17 @@ public class HomingMissle : Projectile
 
     [SerializeField] private AnimationCurve _bulletSpeedCurve;
     [SerializeField] private float _rotationSpeed;
+    [SerializeField] private bool _findTarget;
+    [SerializeField] private float _findTargetDistance = 20;
 
     private float _time = 0;
     private Transform _target;
+    private float _additiveSpeed;
 
     public override void Init(float damage, float critDamage, float critChance, Vector2 direction)
     {
         base.Init(damage, critDamage, critChance, direction);
-        _rigidbody.velocity = _fireDirection * _bulletSpeedCurve.Evaluate(_time);
+        _rigidbody.velocity = _fireDirection * (_bulletSpeedCurve.Evaluate(_time) + _additiveSpeed);
     }
 
     public void SetTarget(Transform target)
@@ -26,10 +30,15 @@ public class HomingMissle : Projectile
     private void FixedUpdate()
     {
         _time += Time.fixedDeltaTime;
+
+        if (_findTarget)
+        {
+            SetTarget(FindClosestTarget());
+        }
         if (_target == null) return;
 
         UpdateRotation();
-        _rigidbody.velocity = transform.right * _bulletSpeedCurve.Evaluate(_time);
+        _rigidbody.velocity = transform.right * (_bulletSpeedCurve.Evaluate(_time) + _additiveSpeed);
     }
 
     private void UpdateRotation()
@@ -63,4 +72,31 @@ public class HomingMissle : Projectile
         Destroy(gameObject);
     }
 
+    private Transform FindClosestTarget()
+    {
+        var targets = FindObjectsOfType<Health>();
+        var distance = Mathf.Infinity;
+        Transform target = null;
+
+        foreach (var health in targets)
+        {
+            if (health.Type != _damageableHealthType) continue;
+            
+            var currentDistance = Vector2.Distance(health.transform.position, transform.position);
+            if (currentDistance > _findTargetDistance) continue;
+
+            if (currentDistance < distance)
+            {
+                target = health.transform;
+                distance = currentDistance;
+            }
+        }
+
+        return target;
+    }
+
+    public override void IncreaseSpeed(float value, float percent)
+    { 
+        _additiveSpeed += value + _bulletSpeedCurve.Evaluate(0) * percent;
+    }
 }

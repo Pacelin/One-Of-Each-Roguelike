@@ -12,7 +12,6 @@ public class WeaponOneBulletFire : WeaponFireState
 
         var bullet = Instantiate(_bulletPrefab, _machine.MainFirePoint.position,
             Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, fireDirection)));
-        _machine.Upgrades.ApplyProjectileUpgrades(bullet);
 
         bullet.Init(
             _machine.Weapon.Data.Damage, 

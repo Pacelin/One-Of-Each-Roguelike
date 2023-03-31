@@ -22,6 +22,8 @@ public class Laser : Projectile
         _lineRenderer.endWidth = endSize;
     }
 
+    public override void AddScale(float multiply) { }
+
     public void ApplyDamage() =>
         _applyDamage = true;
 
@@ -63,4 +65,6 @@ public class Laser : Projectile
         _lineRenderer.SetPositions(new Vector3[] { _startPos, endPos });
         _applyDamage = false;
     }
+
+    public override void IncreaseSpeed(float value, float percent) { }
 }
