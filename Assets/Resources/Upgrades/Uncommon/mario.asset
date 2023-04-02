@@ -19,4 +19,4 @@ MonoBehaviour:
   Sprite: {fileID: -1370910845, guid: 12e641e38d1b1924398fbcd0a819991b, type: 3}
   Uniq: 1
   UpgradePriority: 0
-  _scaleMultiply: 1.5
+  _scaleMultiply: 1.7

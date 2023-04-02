@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "\u0421\u0442\u0440\u0435\u043B\u044F\u0435\u0442 \u043C\u043E\u0449\u043D\u044B\u043C\u0438
     \u0438\u043D\u043F\u0443\u043B\u044C\u0441\u0430\u043C\u0438"
   Quality: 1
-  BulletsInClip: 3
+  BulletsInClip: 0
   Sprite: {fileID: 1054632674, guid: 00bad7e242261b14b9aebef943f9a217, type: 3}
   FireSound: {fileID: 0}
   ReloadSound: {fileID: 0}
@@ -24,8 +24,8 @@ MonoBehaviour:
     BaseDamage: 15
     BaseCritDamageMultiplier: 1.5
     BaseCritChance: 0.5
-    BaseReloadTime: 1
-    BaseClipSize: 36
+    BaseReloadTime: 1.5
+    BaseClipSize: 20
     BaseFireRate: 20
     BaseSpread: 2
   MainFirePosition: {x: 1.45, y: 0.15}

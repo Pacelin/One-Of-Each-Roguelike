@@ -24,6 +24,9 @@ public class WeaponWaitSerialFireRateAndReleaseState : State<WeaponController>
     }
     public override void ChangeState()
     {
+        if (_machine.PlayerWantToReload && !_machine.WeaponIsFull)
+            _machine.SwitchState(_machine.Weapon.ReloadState);
+		
         if (_currentSerialSize > 0)
         {
             if (!_machine.PlayerCanFire)

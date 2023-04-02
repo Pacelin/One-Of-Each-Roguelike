@@ -21,7 +21,7 @@ MonoBehaviour:
   FireSound: {fileID: 0}
   ReloadSound: {fileID: 0}
   Data:
-    BaseDamage: 1
+    BaseDamage: 1.5
     BaseCritDamageMultiplier: 1.5
     BaseCritChance: 0.2
     BaseReloadTime: 3

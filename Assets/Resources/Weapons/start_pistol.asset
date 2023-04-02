@@ -16,12 +16,12 @@ MonoBehaviour:
   Description: "\u041F\u0440\u043E\u0441\u0442\u043E \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442
     \u0441 \u043D\u0435\u043F\u043B\u043E\u0445\u043E\u0439 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0440\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C\u044E"
   Quality: 0
-  BulletsInClip: 16
+  BulletsInClip: 12
   Sprite: {fileID: -2050766474, guid: 7609db00fab9c47418bed9966ba6d37d, type: 3}
   FireSound: {fileID: 0}
   ReloadSound: {fileID: 0}
   Data:
-    BaseDamage: 9
+    BaseDamage: 6
     BaseCritDamageMultiplier: 1.5
     BaseCritChance: 0.4
     BaseReloadTime: 0.6

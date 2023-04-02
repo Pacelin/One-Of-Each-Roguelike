@@ -20,13 +20,13 @@ MonoBehaviour:
   FireSound: {fileID: 0}
   ReloadSound: {fileID: 0}
   Data:
-    BaseDamage: 2
+    BaseDamage: 2.5
     BaseCritDamageMultiplier: 1.5
     BaseCritChance: 0.2
     BaseReloadTime: 2
     BaseClipSize: 100
     BaseFireRate: 50
-    BaseSpread: 5
+    BaseSpread: 10
   MainFirePosition: {x: 0.9, y: 0}
   IdleState: {fileID: 11400000, guid: fc20a155de832cc478a7dafa0c5a8fd8, type: 2}
   FireState: {fileID: 11400000, guid: 44d21d9c773d603498aefc3deffc70cf, type: 2}

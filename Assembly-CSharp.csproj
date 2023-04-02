@@ -152,6 +152,9 @@
      <Compile Include="Assets\Scripts\States\UI\Bar\BarIdleState.cs" />
      <Compile Include="Assets\Scripts\States\Weapon\Fire States\WeaponFireState.cs" />
      <Compile Include="Assets\Scripts\Movement\MovementInputHandler.cs" />
+     <Compile Include="Assets\Scripts\UI\MarkeredButton.cs" />
+     <Compile Include="Assets\Scripts\UI\SceneFade.cs" />
+     <Compile Include="Assets\Scripts\UI\PausePanel.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

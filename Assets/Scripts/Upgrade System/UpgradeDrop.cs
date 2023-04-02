@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class UpgradeDrop : MonoBehaviour
 {
+    [SerializeField] private Boss _boss;
     [SerializeField] private float _dropForce;
     [SerializeField] private float _upgradesCount;
     [SerializeField] private UpgradesFactory _factory;
@@ -11,7 +12,17 @@ public class UpgradeDrop : MonoBehaviour
     [SerializeField] private float _uncommonChances;
     [SerializeField] private float _legendaryChances;
 
-    private void OnDestroy()
+    private void OnEnable()
+    {
+        _boss.OnDeath += OnBossDeath;
+    }
+
+    private void OnDisable()
+    {
+        _boss.OnDeath -= OnBossDeath;
+    }
+
+    private void OnBossDeath()
     {
         for (int i = 0; i < _upgradesCount; i++)
         {

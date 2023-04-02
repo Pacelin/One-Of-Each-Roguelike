@@ -13,6 +13,9 @@ public class WeaponWaitFireRateAndReleaseState : State<WeaponController>
 
     public override void ChangeState()
     {
+        if (_machine.PlayerWantToReload && !_machine.WeaponIsFull)
+            _machine.SwitchState(_machine.Weapon.ReloadState);
+		
         if ((_timer += Time.deltaTime) >= 1 / _machine.Weapon.Data.FireRate && 
             !_machine.PlayerIsFire && 
             !_machine.PlayerIsSecondlyFire)

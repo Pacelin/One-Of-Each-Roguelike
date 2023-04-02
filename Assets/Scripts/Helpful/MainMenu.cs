@@ -1,15 +1,12 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Exit()
-    {
+    public void Exit() =>
         Application.Quit();
-    }
 
-    public void Play()
-    {
-        SceneManager.LoadScene("Game", LoadSceneMode.Single);
-    }
+    public void Play() =>
+        SceneFade.SwitchScene("Game", 0f);
 }
