@@ -1,8 +1,11 @@
-# One-Of-Each-Roguelike
+# Unity Roguelike
+
 Gamedesign Course Work
 
-Игра, созданная мною для проекта по курсу по геймдизайну.
+*Description*
+Game engine: Unity
+Time: 3 weeks
+Game genre: Roguelike
+Created for: Gamedesign course
 
-Условия проекта:
-За 3 недели написать игру, не используя сторонних ассетов, все рисуем, записываем и пишем сами.
-Игра должна как-то обыгрывать тему: Всего по одному (One of Each).
+Most used patterns: State Machine
