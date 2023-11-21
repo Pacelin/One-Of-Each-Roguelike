@@ -6,6 +6,6 @@ Game engine: Unity<br />
 Time: 3 weeks<br />
 Game genre: Roguelike<br />
 Created for: Gamedesign course<br />
+Team: Me<br />
 <br />
-
 Most used patterns: State Machine
