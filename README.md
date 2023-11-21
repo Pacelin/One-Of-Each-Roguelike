@@ -1,12 +1,11 @@
 # Unity Roguelike
 
-Gamedesign Course Work
-
-# Description
-Game engine: Unity
-Time: 3 weeks
-Game genre: Roguelike
-Created for: Gamedesign course
-
+Gamedesign Course Work<br />
+<br />
+Game engine: Unity<br />
+Time: 3 weeks<br />
+Game genre: Roguelike<br />
+Created for: Gamedesign course<br />
+<br />
 
 Most used patterns: State Machine
